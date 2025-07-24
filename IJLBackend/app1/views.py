@@ -4825,3 +4825,13 @@ class EmployeeReportPDFView(View):
             ('TEXTCOLOR', (1, row), (1, row), color),
             ('FONTNAME', (1, row), (1, row), 'Helvetica-Bold')
         ]
+    
+
+# views.py
+from rest_framework import viewsets
+from .models import Dummy
+from .serializers import DummySerializer
+
+class DummyViewSet(viewsets.ModelViewSet):
+    queryset = Dummy.objects.all()
+    serializer_class = DummySerializer

@@ -2330,3 +2330,13 @@ class SDCOrientationFeedback(models.Model):
     @property
     def doj(self):
         return self.operator.date_of_join if self.operator else None
+    
+
+from django.db import models
+
+class Dummy(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.name
