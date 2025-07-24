@@ -504,3 +504,6 @@ from .models import Dummy
 @admin.register(Dummy)
 class DummyAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'description')
+
+
+# sachin typed something
