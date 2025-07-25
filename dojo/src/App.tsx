@@ -88,6 +88,7 @@ import Level0 from './components/LevelWiseTraining/Components/Level0/Level0';
 import TempEmployeeSearch from './components/LevelWiseTraining/Components/Level0/components/TempEmployeeSearch/TempEmployeeSearch';
 import PassedUsersTable from './components/LevelWiseTraining/Components/Level0/components/PassedUsersTable/PassedUsersTable';
 import SkillMatrixPage from './components/Skillmatrix/pages/SkillMatrixPage';
+import LandingPage from './components/Homepage/LandingPage';
 
 
 // import Level3TrainingOptionsPage from './'
@@ -101,13 +102,17 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
+            <Route path="/" element={<LoginForm />} />
+
             <Route element={<AuthLayout />}>
-              <Route path="/" element={<LoginForm />} />
+              {/* <Route path="/" element={<LoginForm />} /> */}
             </Route>
             <Route element={<ProtectedLayout />}>
               <Route element={<MainLayout />}>
 
               <Route path="/home" element={<Home />} />
+              <Route path="/landingpage" element={<LandingPage />} />
+
               <Route path="/management" element={<Management />} />
               {/* <Route path="/advanced" element={<DashboardRedirect />} /> */}
               <Route path="/advance" element={<Advanced />} />

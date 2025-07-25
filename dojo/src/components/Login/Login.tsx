@@ -62,7 +62,7 @@ const LoginForm: React.FC = () => {
       .unwrap()
       .then((response: any) => {
         // Navigate to home on successful login
-        navigate('/home');
+        navigate('/landingpage');
         console.log('Login successful:', response);
       })
       .catch((error: any) => {
